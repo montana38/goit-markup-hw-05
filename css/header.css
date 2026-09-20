@@ -1,6 +1,5 @@
 .header {
-  border-bottom: 1px solid var(--color-cornflower);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  border-bottom: 1px solid #e7e9fc;
 }
 
 .header-container {
@@ -9,28 +8,35 @@
 }
 
 .logo {
-  margin-right: 76px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.33333;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--color-navy-blue);
+  color: #2e2f42;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-right: 76px;
 }
 
-.nav {
+.web {
+  color: #4d5ae5;
+}
+
+.nav-container {
   margin-right: auto;
 }
 
-.nav-list {
+.nav {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
-.nav-link {
+.link {
+  position: relative;
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -38,34 +44,37 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--color-navy-blue);
-  position: relative;
-  transition: color var(--transition-dur-func);
+  color: #2e2f42;
+  transition: color 250ms ease-in-out;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.nav-link.active {
-  color: var(--color-ocean);
+.link.current {
+  color: #404bbf;
 }
 
-.nav-link.active::after {
+.link.current::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--color-ocean);
+  background-color: #404bbf;
   border-radius: 2px;
+}
+
+.link:hover,
+.link:focus {
+  color: #404bbf;
 }
 
 .address-list {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
-.nav-address {
+.address {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -73,11 +82,12 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--color-slate);
-  transition: color var(--transition-dur-func);
+  color: #434455;
+  font-style: normal;
+  transition: color 250ms ease-in-out;
 }
 
-.nav-address:hover,
-.nav-address:focus {
-  color: var(--color-ocean);
+.address:hover,
+.address:focus {
+  color: #404bbf;
 }
